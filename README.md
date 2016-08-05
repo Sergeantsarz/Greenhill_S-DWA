@@ -5,7 +5,7 @@ Author: Sarah R. Greenhill
 Class: DWA
 Date Created: August 4, 2016
 
-Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/appStore
+Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/App Store
 
 Endpoints: 
 
