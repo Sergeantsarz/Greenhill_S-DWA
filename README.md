@@ -12,6 +12,9 @@ Endpoints:
 	GET /api/v1/apps
 	Display All Apps Info
 	
+	GET /api/v1/apps/:id
+	Display Single App Info
+	
 	GET /api/v1/users
 	Display All Users Info
 	EXAMPLE:
@@ -44,10 +47,6 @@ Endpoints:
 			    "appID": null
 			  }
 			]
-
-	
-	GET /api/v1/apps/:id
-	Display Single App Info
 	
 	GET /api/v1/users/:id
 	Display Single User Info
