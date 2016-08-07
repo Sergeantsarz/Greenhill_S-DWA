@@ -68,7 +68,7 @@ Endpoints:
 			    "email": "bob@bobbarker.com",
 			    "createdAt": "2016-08-05T00:15:00.000Z",
 			    "updatedAt": "2016-08-05T00:15:00.000Z",
-			    "appID": null
+			    "appID": 2
 			  },
 			  {
 			    "id": 2,
@@ -77,7 +77,7 @@ Endpoints:
 			    "email": "tina@tinafey.com",
 			    "createdAt": "2016-08-05T00:16:40.000Z",
 			    "updatedAt": "2016-08-05T00:16:40.000Z",
-			    "appID": null
+			    "appID": 5
 			  },
 			  {
 			    "id": 3,
@@ -86,7 +86,7 @@ Endpoints:
 			    "email": "cheryllynncote@gmail.com",
 			    "createdAt": "2016-08-05T00:17:14.000Z",
 			    "updatedAt": "2016-08-05T00:17:14.000Z",
-			    "appID": null
+			    "appID": 4
 			  }
 			]
 	
@@ -101,7 +101,7 @@ Endpoints:
 			    "email": "bob@bobbarker.com",
 			    "createdAt": "2016-08-05T00:15:00.000Z",
 			    "updatedAt": "2016-08-05T00:15:00.000Z",
-			    "appID": null
+			    "appID": "2"
 			}
 	
 
