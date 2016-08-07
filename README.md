@@ -6,7 +6,7 @@ Class: DWA
 Date Created: August 4, 2016
 Date Updated: August 7, 2016
 
-Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/App Store
+Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/App%20Store
 
 Examples show what your output should look like for each entry into the database.
 Recommended use of Postman to interact with this application.
