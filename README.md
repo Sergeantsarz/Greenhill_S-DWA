@@ -11,9 +11,11 @@ Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/App Store
 Examples show what your output should look like for each entry into the database.
 
 Endpoints: 
+	
+	* APPS *
 
 	GET /api/v1/apps
-	Display All Apps Info
+	Display All Current Apps & Their Associated Info
 	EXAMPLE:
 		[
 		  {
@@ -46,19 +48,34 @@ Endpoints:
 		  }
 		]
 	
+	* Shows its associated user *
+	
 	GET /api/v1/apps/:id
-	Display Single App Info
+	Display a Specific App by Its ID
 	EXAMPLE:
 		{
-		    "id": 2,
-		    "title": "Angry Birds",
-		    "description": "Throw birds, knock things down.",
-		    "createdAt": "2016-08-07T17:22:10.000Z",
-		    "updatedAt": "2016-08-07T17:29:30.000Z"
-		  }
-		  
+		  "id": 2,
+		  "title": "Angry Birds",
+		  "description": "Throw birds, knock things down.",
+		  "createdAt": "2016-08-07T17:22:10.000Z",
+		  "updatedAt": "2016-08-07T17:29:30.000Z",
+		  "users": [
+		    {
+		      "id": 1,
+		      "fName": "Bob",
+		      "lName": "Barker",
+		      "email": "bob@bobbarker.com",
+		      "createdAt": "2016-08-05T00:15:00.000Z",
+		      "updatedAt": "2016-08-05T00:15:00.000Z",
+		      "appID": 2
+		    }
+		  ]
+		}
+	
+	* USERS *
+	* User's apps identified by appID *
 	GET /api/v1/users
-	Display All Users Info
+	Display All Current Users & Their Associated Info
 	EXAMPLE:
 			[
 			  {
@@ -91,7 +108,7 @@ Endpoints:
 			]
 	
 	GET /api/v1/users/:id
-	Display Single User Info
+	Display Specific User Info by ID
 	EXAMPLE: 
 			
 			{
