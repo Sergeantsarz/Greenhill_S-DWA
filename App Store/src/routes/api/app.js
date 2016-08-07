@@ -1,10 +1,14 @@
-const user = require('../../models/app');
+//Required model for app to work
+
+const apps = require('../../models/app');
 
 //()=>{} is how we do anon functions now	
-
+module.exports = (express) => {
+	const router = express.Router();
+	
 	//Read All Apps
-	router.get('/app' , (req, res) => {
-		user.findAll((err) =>{
+	router.get('/apps' , (req, res) => {
+		apps.findAll((err) =>{
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);		
@@ -12,9 +16,9 @@ const user = require('../../models/app');
 	});
 	
 	//Read One App
-	router.get('/app/:id' , (req, res) => {
+	router.get('/apps/:id' , (req, res) => {
 		req.body.id = req.params.id;
-		user.find(req.body, (err) =>{
+		apps.find(req.body, (err) =>{
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);		
@@ -22,9 +26,9 @@ const user = require('../../models/app');
 	});
 	
 	//Destroy One App
-	router.delete('/app/:id' , (req, res) => {
+	router.delete('/apps/:id' , (req, res) => {
 		req.body.id = req.params.id;
-		user.destroy(req.body, (err) =>{
+		apps.destroy(req.body, (err) =>{
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);		
@@ -32,9 +36,9 @@ const user = require('../../models/app');
 	});
 	
 	//Update One App
-	router.post('/app/:id' , (req, res) => {
+	router.post('/apps/:id' , (req, res) => {
 		req.body.id = req.params.id;
-		user.update(req.body, (err) =>{
+		apps.update(req.body, (err) =>{
 			res.status(500).json(err);
 		}, (data) => {
 			res.status(200).json(data);		
@@ -42,11 +46,14 @@ const user = require('../../models/app');
 	});
 	
 	//Create App
-	router.post('/app' , (req , res) =>{
-		user.create(req.body , (err) =>{
+	router.post('/apps' , (req , res) =>{
+		apps.create(req.body , (err) =>{
 			res.status(500).json(err);
 		}, (data) =>{
 		res.status(200).json(data);
 		})
 		
 	});
+	
+	return router;
+};

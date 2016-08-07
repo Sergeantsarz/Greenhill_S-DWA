@@ -3,16 +3,10 @@
 module.exports = (express) => {
 	const router = express.Router();
 	
-	router.post('/status' , (req, res) => {
-		console.log("Route Working" , req.body);
-		res.json({ 
-			
-			Healthy: true,	
-		})
-	});
-	
 	//Routes
 	router.use('/api/v1/' , require('./api/user')(express));
+	
+	router.use('/api/v1/' , require('./api/app')(express));
 	
 	return router;
 };

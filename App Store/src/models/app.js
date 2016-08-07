@@ -29,7 +29,7 @@ exports.update = (payload, err , success) => {
 		where: {
 			id: payload.id, 
 		}
-	}).then(existingData) =>{
+	}).then( (existingData) =>{
 		existingData.updateAttributes(payload).then(success).catch(err);
 		}).catch(err);		
 };

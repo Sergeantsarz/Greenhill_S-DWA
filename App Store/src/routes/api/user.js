@@ -1,3 +1,5 @@
+//Requires the user model to keep this functioning
+
 const user = require('../../models/user');
 
 //()=>{} is how we do anon functions now
