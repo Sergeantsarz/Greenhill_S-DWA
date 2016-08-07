@@ -9,6 +9,7 @@ Date Updated: August 7, 2016
 Git Repo: https://github.com/Sergeantsarz/Greenhill_S-DWA/tree/master/App Store
 
 Examples show what your output should look like for each entry into the database.
+Recommended use of Postman to interact with this application.
 
 Endpoints: 
 	
@@ -72,6 +73,16 @@ Endpoints:
 		  ]
 		}
 	
+	POST /api/v1/apps/:id
+	Update App Information by ID
+	EXAMPLE:
+		Will look like previous single app entry, just edit current info and submit
+		
+	DELETE /api/v1/apps/:id
+	Delete App Information by ID
+	EXAMPLE:
+		Will look like previous single app entry, remove app by selecting it by ID, submit until it returns 0 and/or trying to retrieve the entry by ID again returns null
+		
 	* USERS *
 	* User's apps identified by appID *
 	GET /api/v1/users
@@ -121,4 +132,12 @@ Endpoints:
 			    "appID": "2"
 			}
 	
-
+	POST /api/v1/users/:id
+	Update User Information by ID
+	EXAMPLE:
+		Will look like previous single user entry, just edit current info and submit
+		
+	DELETE /api/v1/users/:id
+	Delete App Information by ID
+	EXAMPLE:
+		Will look like previous single user entry, remove specific user by selecting it by ID, submit until it returns 0 and/or trying to retrieve the entry by ID returns null
