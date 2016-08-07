@@ -1,9 +1,12 @@
+//This is the model for users, it is the basis for all CRUD functionality
+
 const db = require('./db');
 
 exports.create = (payload , err , success) =>{
 	db.user.create(payload).then(success).catch(err);
 };
 
+//Get all Users
 exports.findAll = (err , success) => {
 	
 	db.user.findAll().then(success).catch(err);
@@ -23,6 +26,7 @@ exports.find = (payload, err , success) => {
 	}).then(success).catch(err);
 };
 
+//Update Users
 exports.update = (payload, err , success) => {
 	
 	db.user.find({
@@ -34,6 +38,7 @@ exports.update = (payload, err , success) => {
 		}).catch(err);		
 };
 
+//Delete Users
 exports.destroy = (payload, err , success) => {
 	
 	db.user.destroy({

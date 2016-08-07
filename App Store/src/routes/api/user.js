@@ -7,7 +7,7 @@ const user = require('../../models/user');
 module.exports = (express) => {
 	const router = express.Router();
 	
-	//Read All
+	//Read All Users
 	router.get('/users' , (req, res) => {
 		user.findAll((err) =>{
 			res.status(500).json(err);
@@ -16,7 +16,7 @@ module.exports = (express) => {
 		})
 	});
 	
-	//Read One
+	//Read One User
 	router.get('/users/:id' , (req, res) => {
 		req.body.id = req.params.id;
 		user.find(req.body, (err) =>{
@@ -26,7 +26,7 @@ module.exports = (express) => {
 		})
 	});
 	
-	//Destroy One
+	//Delete Single User
 	router.delete('/users/:id' , (req, res) => {
 		req.body.id = req.params.id;
 		user.destroy(req.body, (err) =>{
@@ -36,7 +36,7 @@ module.exports = (express) => {
 		})
 	});
 	
-	//Update One
+	//Update Single User
 	router.post('/users/:id' , (req, res) => {
 		req.body.id = req.params.id;
 		user.update(req.body, (err) =>{
@@ -46,7 +46,7 @@ module.exports = (express) => {
 		})
 	});
 	
-	//Create
+	//Create a User
 	router.post('/users' , (req , res) =>{
 		user.create(req.body , (err) =>{
 			res.status(500).json(err);
@@ -54,8 +54,7 @@ module.exports = (express) => {
 		res.status(200).json(data);
 		})
 		
-	});
-	
+	});	
 	
 	return router;
 };

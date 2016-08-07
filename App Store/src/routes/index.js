@@ -3,9 +3,10 @@
 module.exports = (express) => {
 	const router = express.Router();
 	
-	//Routes
+	//Route for users
 	router.use('/api/v1/' , require('./api/user')(express));
 	
+	//Route for apps
 	router.use('/api/v1/' , require('./api/app')(express));
 	
 	return router;

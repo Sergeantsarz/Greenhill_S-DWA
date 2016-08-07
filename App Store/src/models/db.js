@@ -1,3 +1,5 @@
+//This provides functionality for the Database
+
 const Sequelize = require('sequelize');
 
 require('dotenv').config();

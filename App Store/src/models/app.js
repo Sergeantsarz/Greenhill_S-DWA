@@ -1,9 +1,12 @@
+//This is the model for apps, it is the basis for all CRUD functionality
+
 const db = require('./db');
 
 exports.create = (payload , err , success) =>{
 	db.app.create(payload).then(success).catch(err);
 };
 
+//Get all apps
 exports.findAll = (err , success) => {
 	
 	db.app.findAll().then(success).catch(err);
@@ -23,6 +26,7 @@ exports.find = (payload, err , success) => {
 	}).then(success).catch(err);
 };
 
+//Update app
 exports.update = (payload, err , success) => {
 	
 	db.app.find({
@@ -34,6 +38,7 @@ exports.update = (payload, err , success) => {
 		}).catch(err);		
 };
 
+//Delete app
 exports.destroy = (payload, err , success) => {
 	
 	db.app.destroy({
